@@ -1,36 +1,46 @@
 <DOCTYPE! html>
     <html>
         <head>
-            <meta charset="utf-">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title></title>
             <style>
                 body, html {
                     margin: 0;
                     padding: 0;
                     width: 100%;
+                    height: 100%;
+                    overflow-x: hidden; /* This prevents white-space from scroll bar*/
+
+                    /*this is for normalizing the page with no padding*/
+                }
+                body{
+                    background: linear-gradient(to bottom, #fff9d6, #ffdf77); /* to -bottom, top, left and right from where you end-start*/
+                    background-size: cover; 
+                    background-repeat: no-repeat;
+                    min-height: 100vh
                 }
                 a{
                   font-family: Verdana, Geneva, Tahoma, sans-serif;
                   font-weight: bold;
                   text-decoration: none;
                   color: black;
-                  font-size: 50px;
+                  font-size: 2.604vw;
                 }
                 a:hover{
-                    color: rgb(126, 116, 85);
+                    color: #7e7455;
                 }                       
                 .navigation{
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    height: 50px;
-                    background-color: #e7cc73;                  
+                    height: 2.604vw;
+                    background: khaki;                  
                     margin: 0;       
-                    padding: 20px;
+                    padding: 1.042vw;
                 }
                 .headerlist{
-                    background-color: #e6c771;
-                    border-radius: 25px;
+                    border-radius: 1.302vw; /* Centered Buttons*/
                     display: flex;
                     flex-direction: row;
                     align-items: center;
@@ -38,12 +48,99 @@
                     list-style: none;
                 }
                 li.Next{
-                    padding-right: 50px ;
-                  
-                }    
-                       
+                    padding-right: 2.604vw ;
+                }
 
+                #Ingredients{
+                    padding-top: 4.167vw; /*this nest the class ingredients and the img*/
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 5.208vw;
+                    
+
+                }
+                .Ingredients {                                 
+                    font-family: LEMON MILK;
+                    font-weight: bold;
+                    font-size: 2.604vw;                                      
+                }
+
+                .Ingredientslist{
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .Ingredientslist li::marker{
+                    content: '♥';             /*This is how to change the symbols of the bullet points*/
+                    color: red;
+                    font-size: 1.823vw;
+                    margin-right: 0.521vw; 
+        
+                }
+                #Ingredients img {
+                    box-shadow: 0.26vw 0.313vw 0.156vw #3d3326a6;
+                    border-radius: 2.083vw 2.083vw 2.083vw 2.083vw;
+                    float: left;
+                    height: 18.229vw;
+                    width: 18.229vw;
+
+                }
+                .in{
+                    font-size: 1.563vw;
+                }
+        
+
+                .Directions{
+                    display: flex;
+                    justify-content: center; /*this is the headling Directions*/
+                    font-family: LEMON MILK;
+                    font-weight: bold;
+                    font-size: 2.604vw;  
+                    padding-top: 0.521vw;          
+
+                }
+
+                .drcontainer{
+                    list-style: square;  /*this is the STEPS container flex-box*/
+                    margin: 0;
+                    padding-top: 0.5vw;
+                    padding-bottom: 0.5vw;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;                   
+                    font-family: cursive;
+                    border-radius: 5.208vw 5.208vw 7.813vw 7.813vw;
+                    
+                }
                 
+                h4{
+                    margin: 0;
+                    padding: 0.521vw 0 1.042vw 0;
+                    font-size: 1.302vw ;
+                }
+
+                li.dr{
+                    margin: 0;
+                    padding: 0vw 0.521vw 0vw 0.521vw; /*The box style and decoration (STPES 1 and STEPS 2)*/
+                    color: #ffffff;
+                    font-size: 1.302vw;
+                    text-align: center;
+                    overflow: auto;
+                    width: 20.833vw;
+                    height: 15.625vw;
+                    border-radius: 4.167vw;
+                    background-color: #000000;          
+                }
+                h1{                  
+                    display: flex;
+                    justify-content: center;
+                    font-family: LEMON MILK;
+                    flex: 1 1 0;
+                    font-size: 3rem;
+                }                
+  
             </style>
         </head>
 
@@ -59,32 +156,34 @@
              </header>
 
             <main>
-
-                <section id="Ingredients">
-                    <h2>Ingredients</h2>
-                    <ul class="Ingredients list">
-                        <li>4 ounces elbow macaroni</li>
-                        <img src="img/mac.jpg" alt Mac and Cheese>
-                        <li>4 ounces cubed processed cheese food (such as Velveeta)</li>
-                        <li>2 fluid ounces milk</li>
-                        <li>¼ teaspoon ground black pepper</li>
+                <h1> Easy Mac n Cheese</h1>
+                <section id="Ingredients"> 
+                    <img src="img/mac.jpg" alt="Mac and Cheese">
+                    <ul class="Ingredientslist">                       
+                        <h2 class="Ingredients">Ingredients</h2>
+                        <li class="in">4 ounces elbow macaroni</li>                       
+                        <li class="in">4 ounces cubed processed cheese food (such as Velveeta)</li>
+                        <li class="in">2 fluid ounces milk</li>
+                        <li class="in">¼ teaspoon ground black pepper</li>
                     </ul>
                 </section>
 
                 <section id="Directions">
-                    <h2>Directions</h2>
-                    <ul class="Directions list">
-                        <h4> Step 1</h4>
-                        <li>Bring a large pot of lightly salted water to a boil. Cook elbow macaroni 
+                    <h2 class="Directions">Directions</h2>
+
+                    <ul class="drcontainer">
+                        
+                        <li class="dr"><h4> Step 1</h4>Bring a large pot of lightly salted water to a boil. Cook elbow macaroni 
                             in the boiling water, stirring occasionally, until tender yet firm to the 
                             bite, 8 to 10 minutes; drain.
-                        </li>
-                        <h4> Step 2</h4>
-                        <li>Place a saucepan over medium-low heat; add cheese , milk, and black pepper.
+                        </li>                      
+                        <li class="dr"><h4> Step 2</h4>Place a saucepan over medium-low heat; add cheese , milk, and black pepper.
                              Cook until cheese has melted, stirring frequently. Stir in drained macaroni 
                              until evenly coated.
                         </li>
+
                     </ul>
+
                 </section>
 
 
