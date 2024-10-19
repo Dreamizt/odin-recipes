@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biscuits</title>
+        <style>
+            *, 
+            *::before
+            *::after {
+                margin: 0;
+                padding: 0; 
+                box-sizing: border-box;
+            }
+            /*this too*/
+            body, html{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                background-color: #deb887;
+                background-repeat: no-repeat;
+                box-sizing: border-box;
+            }
+
+            .navbar a{
+                text-align: center;
+                padding: 0.2em 1em 0.2em 1em;
+                border-radius: 0.6em ;
+                text-decoration: none;
+                color: #000000;
+                transition: 150ms ease;
+            }
+
+            a:hover{
+                background-color: #beaa902d;
+                color: #ffffff;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+             /*Remember the Body reset style (Important)*/
+
+             /*--- TOP NAV---*/
+
+
+            .topnav { 
+                position: fixed;
+                top: 0;
+                width: 100%;
+                box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.493);
+                background-color: #ffffffea;
+                display: flex;
+                align-items: center;
+                height: 5.4vw;
+            }
+
+            .navbar {
+                box-sizing: border-box;
+                width: 100%;
+                display: flex;  
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0em 2em 0em 2em;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 2.1rem;
+                font-weight: bold;
+                list-style: none;
+            }
+
+            li.home, li.next {
+                padding-left: 0.3em;
+            }
+
+            .navbar li::marker {
+                content: '🍪';               
+            }
+            /*--- TOP NAV---*/
+
+            /*--- Basic Biscuits---*/
+
+            .s1 h1,.s1 p, .s1 img{
+
+           }
+
+            .s1 {
+                display: grid;
+                grid-template-rows: 0.2fr 0.3fr 0.3fr ; 
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                justify-content: center;
+                justify-items: center;
+                margin: 7em auto;
+                padding-top: 1em;
+                gap: 1em;
+            }
+
+            .s1 h1 {
+                margin: 2rem;
+                font-family: Christmas;
+                font-size: 6rem;
+                grid-area: 1/3/2/8 ;
+            }
+
+            .p1 {
+                font-family: Gabriola;
+                box-sizing: border-box;
+                text-align: left;
+                align-self: start;
+                line-height: 2.5rem;
+                font-size: 3rem;
+                grid-area: 2/5/3/8;
+            }
+
+            .p2 {
+                font-family: Gabriola;
+                text-align: left;
+                align-self: center;
+                line-height: 2.5rem;
+                font-size: 3rem;
+                grid-area: 3/5/4/8 ;
+            }
+
+            .s1 img{ 
+                align-self: center;    
+                border-radius: 2em;
+                grid-area: 2/3/3/5; 
+            }
+
+            /*--- Basic Biscuits---*/
+
+             /*--- Ingredient-Basic---*/
+
+            .s2{     
+                display: grid;
+                grid-template-rows: 0.1fr 0.1fr 1fr 1fr; 
+                grid-template-columns:repeat(7, 0.15fr) ;
+                justify-content: center;
+                justify-items: center;
+                margin: 0 auto;
+                padding-top: 5em;
+                gap: 2em;
+            }
+
+            .s2 h1, .s2 p, .s2 ul{
+                margin: 0;
+            }
+
+            .s2 h1{
+                font-family: Christmas;
+                align-self: center;
+                font-size: 5rem;
+                grid-area: 1/3/2/6;
+            }
+
+            .s2 p{
+                font-family: Gabriola;
+                align-self: center;
+                font-size: 3rem;
+                grid-area: 2/2/3/7;
+            }
+
+            .s2 ul{
+                font-family: Gabriola;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 3em;
+                border-radius: 2em;
+                background-color: #ffffff80;
+                box-shadow: 0.2em 0.4em 1em #00000052;
+                font-size: 1.5rem;
+                grid-area: 3/3/5/6;
+            }
+
+            .s2 ul li{
+                font-size: 2rem;
+                list-style: none;
+                padding: 1rem;
+            }
+            .s2 ul li::marker{
+                content: '🥄';
+            }
+          /*--- Ingredient-Basic---*/
+
+          /*--- How to Make Biscuits---*/
+            .s3{
+                display: grid;
+                grid-template-rows: repeat(5,0.02fr); 
+                grid-template-columns:repeat(7, 0.15fr);
+                justify-content: center;
+                justify-items: center;
+                margin: 5em 0em 0em 0em;
+                gap: 2em;
+            }
+            .s3 h1, .s3 p, .s3 ol{
+                margin: 0;
+            }
+
+            .s3 h1{
+                font-family: Christmas;
+                font-size: 4rem;
+                grid-area: 1/3/2/6;
+            }
+
+            .s3 p{
+                font-family: Gabriola;
+                font-size: 2rem;
+                grid-area: 2/2/3/7;
+            }
+
+            .s3 ol{
+                font-family: Gabriola;
+                font-size: 3rem;
+                line-height: 2.5rem ;
+                grid-area: 3/3/4/6;
+            }
+
+            .s3 ol li{
+                padding: 1rem;
+            }
+
+            /*--- How to Make Biscuits---*/
+
+            /*--- Link to website---*/
+
+            .s4{
+                background-color: #f5eee67e;
+                box-shadow: 0.2em 0.2em 1em #0000004f;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1em;
+                border-radius: 5em 2em 9em 2em;
+            }
+
+            .s4 h1{
+                font-family: Christmas;
+                margin: 0;
+                font-size: 4rem;
+            }
+
+            .s4 p{
+                font-family: Gabriola;
+                text-align: center;
+                width: 30em;
+                font-size: 3rem;
+                line-height:2.5rem;
+            }
+
+            .s4 article{
+                color: #800000;
+                font-size: 1.2rem;
+            }
+
+           /*--- Link to website---*/
+
+           /*--- Ingredients---*/
+
+           .ingredients{
+            display: grid;   
+            grid-template-rows: repeat(7, 0.2fr) ;
+            grid-template-columns: repeat(7, 0.4fr) ;
+           }
+           .ingredients h1{
+            font-family: Christmas;
+            margin: 1em 0em 0em 0em;
+            font-size: 5rem;
+            grid-area: 1/2/2/5;
+           }
+           .ingredients ul{
+            font-family: Gabriola;
+            list-style: none;
+            line-height: 1.4em;
+            font-size: 3rem;
+            grid-area: 2/2/4/5;
+           }
+
+           .ingredients ul li{
+            padding-left: 1em;
+           }
+
+           .ingredients ul li::marker{
+            content: '🥣';
+           }
+
+           /*--- Ingredients---*/
+
+           /*--- Steps ---*/
+
+           .steps , h4, .howto {
+            padding: 0;
+            margin: 0;
+           }
+
+           .steps{
+            padding: 5rem;
+            background-color: #f5eee67e;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2em;
+           }
+
+           h4{
+            font-family: Christmas;
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            margin-bottom: 0.5em;
+            font-size: 2.5em;
+           }
+
+           .howto{
+            font-family: Gabriola;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 3rem;
+            line-height: 2.4rem;
+            width: 100%;
+           }
+
+           .step1 {
+            grid-area: 1/1/2/2;
+           }
+
+           /*--- Steps ---*/
+
+           /*--- BottomNav---*/
+
+           .bottomnav{
+            background-color: darkred;
+            display: flex;
+            align-items: center;
+           }
+
+           .bottomnav ul{
+            color: #ffffff;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            padding: 0em 2em 0em 2em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2.1rem;
+            font-weight: bold;
+            list-style: none;
+           }
+
+           .odin{
+            padding: 1em;
+            text-decoration: none;
+            color: black;
+            transition: 200ms ease-out;
+           }
+
+           .odin:hover{
+            color: #b8b8b8 ;
+            background-color: #630000;
+            text-shadow: 0px 0px 50px #ffffffd2;
+           }
+
+            /*--- BottomNav---*/
+      
+
+
+        
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <nav class="topnav">
+                <ul class="navbar">
+                    <a href="../index.html"><li class="home">HOME</li></a>
+                    <a href="macncheese.html"><li class="next">NEXT</li></a>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="s1">
+                <h1>Basic Biscuits</h1>
+                <img src="img/biscuits.jpg" alt="Biscuits">
+                <p class="p1">This homemade biscuit recipe uses simple ingredients and 
+                    baking powder as the leavening. The biscuits turn out golden 
+                    brown and super tender inside.</p>
+                <p class="p2">Looking for a homemade biscuit recipe that's perfect for 
+                    eginners and experienced cooks alike? Your search ends here. 
+                    This tried-and-true recipe is beloved by the Allrecipes 
+                    community because it's easy to make with just five ingredients, 
+                    it calls for kitchen staples you probably already have on hand, 
+                    and it's absolutely delicious.</p>              
+            </section>
+
+            <section class="s2">
+                <h1>Basic Biscuit Ingredients</h1>
+                <p class="p3">Here's what you'll need to make this top-rated biscuit recipe:</p>
+                <ul>
+                    <li><strong>Flour:</strong> All-purpose flour holds the ingredients together. Also, 
+                        the protein in flour (when combined with moisture and heat)
+                        creates gluten, which provides structure.</li>
+                    <li><strong>Powder:</strong> Baking powder, not yeast, is used as a leavener
+                        in this easy biscuit recipe. It causes the dough to expand, 
+                        giving the biscuits volume and texture.</li>
+                    <li><strong>Salt:</strong> Salt acts as a flavor enhancer and it strengthens the protein in the dough.</li>
+                    <li><strong>Shortening:</strong> Shortening is made of purely fat, unlike butter which contains water and
+                        milk solids. This means it's better at reducing (or "shortening!") gluten strands, 
+                        resulting in a soft and crumbly biscuit.</li>
+                    <li><strong>Milk:</strong> Cold milk adds moisture, flavor, and structure to the biscuit dough.</li>   
+                </ul>
+            </section>
+
+            <section class="s3">
+                <h1>How to Make Biscuits</h1>
+                <p>You'll find the full recipe below, but here's a brief overview of what you can expect:</p>
+
+                <ol>
+                    <li>Prepare the Dough: Sift the dry ingredients into a large bowl. Cut in the shortening, 
+                        then add the milk. Mix until the dough is soft and doesn't stick to the side of the bowl.</li>
+                    <li>Knead and Roll: Turn the dough out onto a lightly floured surface and knead briefly. 
+                        Roll the dough into an even sheet that's about ½-inch thick.</li>
+                    <li>Cut and Bake: Use a lightly floured biscuit cutter to cut out the biscuits. Place the cut 
+                        biscuits on an ungreased baking sheet. Re-roll the dough, repeating the cutting process, 
+                        until all the dough is gone. Bake until golden brown.</li>
+                </ol>
+
+            </section>
+
+            <section class="s4">
+                <h1>What to Serve With Biscuit</h1>
+                <p>Top your biscuits with homemade sausage gravy, jam, honey butter, or the spread of your choice. 
+                You can also pair them with breakfast meats — such as bacon, sausage, or chicken — or serve 
+                them with a hearty soup or stew (you can't go wrong with a classic beef stew).</p>
+
+                    <article><a href="https://www.allrecipes.com/gallery/biscuit-topping-ideas/">More inspiration:</a> 10 Ways to Dress Up Your Homemade Biscuits </article>        
+            </section>
+
+            <section class="ingredients">
+                <h1>Ingredients</h1>
+                <ul>
+                    <li>2 cups all-purpose flour</li>
+                    <li>1 tablespoon baking powder</li>
+                    <li>½ teaspoon salt</li>
+                    <li>½ cup shortening</li>
+                    <li>¾ cup cold milk</li>
+                </ul>
+            </section>
+
+            <section class="steps">
+
+                <div class="step1">
+                    <h4>STEP 1</h4>
+                    <p class="howto">Gather all ingredients and preheat oven to 450 degrees F (230 degrees C).
+                    </p>
+                </div>
+
+                <div class="step2">
+                    <h4>STEP 2</h4>
+                    <p class="howto">In a large mixing bowl sift together flour, baking powder and salt. Cut in 
+                        shortening with fork or pastry blender until mixture resembles coarse crumbs.</p>
+                </div>
+
+                <div class="step3">
+                    <h4>STEP 3</h4>
+                    <p class="howto">Pour milk into flour mixture while stirring with a fork. Mix in milk 
+                        until dough is soft, moist and pulls away from the side of the bowl.</p>
+                </div>
+
+                <div class="step4">
+                    <h4>STEP 4</h4>
+                    <p class="howto">Turn dough out onto a lightly floured surface and knead dough briefly, 
+                        5 to 7 times.</p>
+                </div>
+
+                <div class="step5">
+                    <h4>STEP 5</h4>
+                    <p class="howto">Roll dough out into a 1/2 inch thick sheet and cut out biscuits with a floured 
+                        cookie cutter. Press together unused dough and repeat rolling and cutting procedure.</p>
+                </div>
+                
+                <div class="step6">
+                    <h4>STEP 6</h4>
+                    <p class="howto">Place biscuits on ungreased baking sheets and bake in preheated oven until golden 
+                        brown, about 10 minutes.</p>
+                </div>
+
+                <div class="step7">
+                    <h4>STEP 7</h4>
+                    <p class="howto">Enjoy!</p>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <Nav class="bottomnav"> 
+            <ul>
+                <li><a class="odin" href="../index.html">HOME</li></a>
+                <li><a class="odin" href="https://www.theodinproject.com/about">odin-project</a></li>
+                <li>Dreamist</li>
+            </ul>
+        </Nav>
+        </footer>
+
+    </body>
+
+    
+</html>

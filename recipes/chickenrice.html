@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+            <title>Chicken Rice</title>
+            <style>
+                 *{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box ;
+                 }
+                    
+                body{
+                    background-color: burlywood;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    }
+
+                    /*Normalizing the webpage*/
+                
+                a{
+                    text-decoration: none;
+                    color: #000000;
+                    list-style: none;
+                    transition:ease-out;
+                }
+
+                a li::marker{
+                    content: '📌';
+                }
+
+
+                a:hover{
+                    background-color: #deb887;
+                    color: aliceblue;       /*Made the button and not the text light up*/
+                    border-radius: 0.5em;  
+                }
+                /*--------- Navigation_Bar ---------*/
+
+                .Home ,.Next{
+                    padding: 0.2em;
+                    margin: 0;
+                    border-radius: 0.5em;
+                }
+                .headerlist{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    padding: 0em 2em 0em 2em;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 2.1rem;
+                    font-weight: bold;
+                }
+                .navigation{
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin: 0;
+                    background-color: rgb(240, 248, 255);
+                    height: 5em;
+                }
+
+            
+                 /*--------- Navigation_End ---------*/
+
+                 /*--------- First one/two img Chicken Fried Rice ---------*/
+                .one{
+                    margin: 6em;
+                    display: flex;
+                    justify-content: center;
+                    gap: 5em;
+                }
+                img{
+                    overflow-x:hidden;
+                    width: 28em;
+                    height: 28em;
+                    object-fit: cover;
+                    border-radius: 4em;
+                    box-shadow: 0.2em 0.2em 0.4em rgba(0, 0, 0, 0.452);
+                    margin: 0;
+                    padding: 0;
+
+                }
+                .chicken{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                h1{
+                    margin: 0em 0em 0.5em 0em;
+                    font-family: christmas;
+                    font-weight: bold;           
+                    font-size: 5rem;
+                }
+
+                .chicken p {
+                    margin: 0;
+                    text-align: center;
+                    font-family: Gabriola;
+                    line-height: 2rem;
+                    font-size: 2.7rem;
+                    width: 20em;
+                }
+                .two{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                h2{
+                    margin: 0.6em 0em 0em 0em;
+                    font-family: christmas;
+                    font-weight: bold;           
+                    font-size: 5rem;
+                }
+                
+                ul{
+                    list-style: none ;
+                    font-size: 2.8em;
+                    line-height: 1.05em;
+                    font-family: Gabriola;                    
+                }
+                ul li{
+                    text-align: left;
+                    padding-left: 0.8em;
+                }
+                .ing li::marker{
+                    content: '✦';
+                    color: #ffbe33;
+                    text-shadow: 0.03em 0.05em 0.09em #271e0ca2;
+                }
+
+                /*--------- End  ---------*/
+        
+                .three h2{ 
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+                .directions {
+                    margin: 0;
+                    padding: 3em 12em 0em 12em;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    height: 15em;
+                    gap: 5em;                    
+                }
+                li.box{
+                    padding: 0em 0.1em 5em 0.1em;
+                    overflow:visible;
+                    width: 30em;
+                    height: 12em;
+                    font-family: Gabriola;
+                    line-height: 1em;
+                    font-size: 2.9em;
+                }
+
+
+            </style>
+        </head>
+        <body>
+
+            <header>
+                <nav class="navigation">
+                    <ul class="headerlist">
+                        <a href="../index.html"><li class="Home">HOME</li></a>
+                        <a href="biscuits.html"><li class="Next">NEXT</li></a>
+                    </ul>
+                </nav>
+             </header>
+
+             <main>
+                <section class="one">
+                    <img src="img/chicken_pan.jpg" alt="Chicken Fried Rice">
+                        <div class="chicken">
+                            <h1>Chicken Fried Rice</h1>
+                            <p>This chicken fried rice recipe is very easy and tasty! It's 
+                            basically cooked chicken, rice, soy sauce, and shredded egg 
+                            stir-fried together. For best results, use leftover cooked 
+                            rice.
+                            </p>
+                        </div>
+                </section>
+                <hr style="width: 50%; border: 0.2em solid #000; border-radius: 5em; margin: 0 auto;">
+                <section class="two">
+                    <h2>Ingredients</h2>
+                    <ul class="ing">
+                        <li><strong>1</strong> large egg</li>
+                        <li><strong>15 mL</strong> water</li>
+                        <li><strong>14 g</strong> butter</li>
+                        <li><strong>15 mL</strong> vegetable oil</li>
+                        <li><strong>1 onion</strong>, chopped</li>
+                        <li><strong>470 g</strong> cooked white rice, cold</li>
+                        <li><strong>150 g</strong> cooked, chopped chicken meat</li>
+                        <li><strong>30 mL</strong> soy sauce</li>
+                        <li><strong>1 teaspoon</strong> (5 g) ground black pepper</li>
+                    </ul>
+                </section>
+                <section class="three">
+
+                    <h2>Instructions</h2>
+
+                    <ol class="directions">
+                        
+                            <li class="box"><strong>Cook the egg:</strong> In a small bowl, whisk the egg with 15 mL of water. 
+                            Heat a pan over medium heat and melt 14 g of butter. Pour in the 
+                            egg mixture and scramble until fully cooked. Once done, remove the 
+                            scrambled egg from the pan and set it aside for later. 
+                            </li>
+                            <li class="box"><strong>Sauté the onion:</strong> In the same pan, add 15 mL of vegetable oil and 
+                            heat over medium heat. Add the chopped onion and sauté for 3-5 
+                            minutes until the onion becomes soft and translucent, stirring 
+                            occasionally to prevent burning.</p>
+                            <li class="box"><strong>Combine and season:</strong> Add 470 g of cold, cooked white rice and 150 g 
+                            of chopped chicken to the pan. Stir everything together and cook for 
+                            3-4 minutes until the rice and chicken are heated through. Pour in 30 mL
+                            of soy sauce and sprinkle 5 g of ground black pepper over the mixture. 
+                            Stir well to evenly coat the rice. Finally, add the scrambled egg back 
+                            to the pan, mix thoroughly, and serve hot!</li>
+                         
+                    </ol>
+
+            </section>
+             </main>      
+        </body>
+    
+</html>
